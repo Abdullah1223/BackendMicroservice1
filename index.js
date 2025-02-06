@@ -28,7 +28,7 @@ if(cluster.isPrimary){
     const app = express();
     app.use(cookieParser())
     app.use(cors({
-        origin: `${process.env.ORIGINURL}`, // Frontend origin
+        origin: 'https://rankmusic.vercel.app', // Frontend origin
         credentials: true,
 }));
 // app.use(cors({
