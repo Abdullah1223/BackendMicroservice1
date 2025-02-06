@@ -36,7 +36,7 @@ if(cluster.isPrimary){
 //     credentials: true,
 // }));
  
-   conn('https://2ce5-36-255-44-239.ngrok-free.app ')
+   conn(process.env.MONGODBURI)
    app.use(express.json())
 
    app.use(morgan('dev'))
