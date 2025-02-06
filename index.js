@@ -27,15 +27,15 @@ if(cluster.isPrimary){
 }else{
     const app = express();
     app.use(cookieParser())
-    app.use(cors({
-        origin: `${process.env.ORIGINURL}`, // Frontend origin
-        credentials: true,
-}));
+//     app.use(cors({
+//         origin: `${process.env.ORIGINURL}`, // Frontend origin
+//         credentials: true,
+// }));
 // app.use(cors({
 //     origin: 'http://localhost:5173', // Frontend origin
 //     credentials: true,
 // }));
- 
+   app.use(cors());
    conn(process.env.MONGODBURI)
    app.use(express.json())
 
