@@ -36,7 +36,7 @@ if(cluster.isPrimary){
 //     credentials: true,
 // }));
  
-   conn('mongodb://localhost:27017/MusicApp')
+   conn('https://2ce5-36-255-44-239.ngrok-free.app ')
    app.use(express.json())
 
    app.use(morgan('dev'))
