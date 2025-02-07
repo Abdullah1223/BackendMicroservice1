@@ -3,6 +3,7 @@ const CreatingJwtTokens = (payload,res)=>{
      
      const token = jwt.sign({payload},process.env.SECRET_KEY,{ expiresIn: '15m' })
              res.cookie('token', token, {
+                domain: ".up.railway.app",
                 httpOnly: true,
                 secure: true,
                 //sameSite:'strict'
