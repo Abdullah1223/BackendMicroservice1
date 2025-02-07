@@ -31,6 +31,7 @@ const handleSignup = async(req,res)=>{
          res.cookie('token', token, {
             httpOnly: true,
             secure: true,
+             domain: ".up.railway.app",
             //sameSite:'Strict'
             sameSite: 'None',
             maxAge: 15*60*1000,
